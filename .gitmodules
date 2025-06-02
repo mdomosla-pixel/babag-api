@@ -1,0 +1,3 @@
+[submodule "checkouts/babag-common"]
+	path = checkouts/babag-common
+	url = git@github.com:statoilfuelretail/babag-common.git
