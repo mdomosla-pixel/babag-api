@@ -1,0 +1,33 @@
+#!/bin/sh
+
+set -e
+
+case $1 in
+    configure)
+        if ! getent passwd babag > /dev/null 2>&1 ; then
+            adduser --system --home /nonexistent --no-create-home babag || true
+        fi
+    ;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+# Automatically added by dh_installinit
+if [ -x "/etc/init.d/babag-api" ] || [ -e "/etc/init/babag-api.conf" ]; then
+	if [ ! -e "/etc/init/babag-api.conf" ]; then
+		update-rc.d babag-api defaults >/dev/null
+	fi
+	invoke-rc.d babag-api start || exit $?
+fi
+# End automatically added section
+# Automatically added by dh_systemd_start
+if [ -d /run/systemd/system ]; then
+	systemctl --system daemon-reload >/dev/null || true
+	deb-systemd-invoke start babag-api.service >/dev/null || true
+fi
+# End automatically added section
+

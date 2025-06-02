@@ -1,0 +1,34 @@
+{:log-level "info"
+ :aws       {:region         "http://localhost:8000"
+             :statuses-table "dev-babag-statuses"}
+
+ :postgres  {:username "postgres"
+             :password "postgres"
+             :database "postgres"}
+
+ :rabbitmq  {:username  nil
+             :password  nil
+             :host      nil
+             :port      nil
+             :vhost     nil
+
+             :ssl       false
+             :cacert    nil
+             :cert      nil
+             :key-pkcs8 nil}
+
+ :api       {:bind-address "127.0.0.1"
+             :port         8080}
+
+ :admin     {:enabled      true
+             :bind-address "127.0.0.1"
+             :port         8081}
+
+ :nrepl     {:enabled      "true"
+             :port         7888
+             :bind-address "127.0.0.1"}
+
+ :metrics   {:enabled         false
+             :host            "localhost"
+             :port            8125
+             :flush-frequency "15s"}}

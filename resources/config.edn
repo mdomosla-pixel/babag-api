@@ -1,0 +1,38 @@
+{:log-level "info"
+ :aws       {:region         "eu-west-1"
+             :statuses-table "babag-statuses"}
+
+ :rabbitmq  {:username   nil
+             :password   nil
+             :host       nil
+             :port       nil
+             :vhost      nil
+
+             :queue-name "babag-smses"
+
+             :ssl        false
+             :cacert     nil
+             :cert       nil
+             :key-pkcs8  nil}
+
+ :postgres  {:username nil
+             :password nil
+             :database nil
+             :host nil}
+
+ :api       {:bind-address "0.0.0.0"
+             :port         8080}
+
+ :admin     {:enabled      true
+             :bind-address "127.0.0.1"
+             :port         8081}
+
+ :nrepl     {:enabled      "false"
+             :port         7888
+             :bind-address "127.0.0.1"}
+
+ :metrics   {:enabled         false
+             :host            "localhost"
+             :port            8125
+             :flush-frequency "15s"}}
+

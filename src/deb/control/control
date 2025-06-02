@@ -1,0 +1,8 @@
+Package: [[name]]
+Version: [[version]]
+Section: misc
+Priority: low
+Architecture: all
+Description: [[description]]
+Maintainer: Karolis Labrencis <karolis@labrencis.lt>
+Depends: openjdk-8-jre | java8-runtime

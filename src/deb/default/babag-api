@@ -1,0 +1,12 @@
+#; AWS
+#AWS_REGION="eu-west-1"
+#DYNAMO_STATUSES_TABLE="babag-statuses"
+#
+#; RabbitMQ
+#RABBITMQ_URL="amqp://guest:guest@localhost:5672/"
+#
+#; nREPL
+#NREPL_ENABLED="false"
+#NREPL_PORT="7888"
+#NREPL_BIND_ADDRESS="127.0.0.1"
+
